@@ -23,11 +23,11 @@ pokemonsFilter.init(function(typeFilter, nameFilter, attackMinFilter, defenseMin
 
             const hasName = !nameFilter || pokemon.pokemon.includes(nameFilter);
 
-            const hasAttack = !attackMinFilter || pokemon.attack > attackMinFilter;
+            const hasAttack = !attackMinFilter || pokemon.attack >= attackMinFilter;
 
-            const hasDefense = !defenseMinFilter || pokemon.defense > defenseMinFilter;
+            const hasDefense = !defenseMinFilter || pokemon.defense >= defenseMinFilter;
 
-            const hasHp = !hpMinFilter || pokemon.hp > hpMinFilter;
+            const hasHp = !hpMinFilter || pokemon.hp >= hpMinFilter;
 
             return hasType && hasName && hasAttack && hasDefense && hasHp;
         });
